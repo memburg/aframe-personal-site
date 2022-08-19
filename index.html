@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramb Memburg | Software Engineer</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene vr-mode-ui="enabled: false">
+        <!-- Assets -->
+        <a-assets>
+            <a-asset-item
+                id="tree-obj"
+                src="/Assets/Models/Me.obj">
+            </a-asset-item>
+
+            <a-asset-item
+                id="tree-mtl"
+                src="/Assets/Models/Me.mtl">
+            </a-asset-item>
+        </a-assets>
+
+        <!-- Backgroud settings -->
+        <a-sky color="#e3ddcf"></a-sky>
+
+        <!-- 3D Models Instances -->
+        <a-obj-model
+            src="#tree-obj"
+            mtl="#tree-mtl"
+            animation="property: rotation; easing: linear; to: 360 0 360 ; loop: true; dur: 10000">
+        </a-obj-model>
+
+        <!-- Camera settings -->
+        <a-camera
+            position="0 0.5 5"
+            wasd-controls="enabled: false">
+        </a-camera>
+    </a-scene>
+</body>
+
+</html>
