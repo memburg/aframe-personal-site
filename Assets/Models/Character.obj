@@ -4,7 +4,7 @@
 o 
 
 # material
-mtllib Me.mtl
+mtllib Character.mtl
 usemtl palette
 
 # normals

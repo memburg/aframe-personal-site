@@ -13,14 +13,26 @@
     <a-scene vr-mode-ui="enabled: false">
         <!-- Assets -->
         <a-assets>
+            <!-- Character model -->
             <a-asset-item
-                id="tree-obj"
-                src="./Assets/Models/Me.obj">
+                id="character-obj"
+                src="./Assets/Models/Character.obj">
             </a-asset-item>
 
             <a-asset-item
-                id="tree-mtl"
-                src="./Assets/Models/Me.mtl">
+                id="character-mtl"
+                src="./Assets/Models/Character.mtl">
+            </a-asset-item>
+
+            <!-- Pot model -->
+            <a-asset-item
+                id="pot-obj"
+                src="./Assets/Models/Pot.obj">
+            </a-asset-item>
+        
+            <a-asset-item
+                id="pot-mtl"
+                src="./Assets/Models/Pot.mtl">
             </a-asset-item>
         </a-assets>
 
@@ -29,9 +41,17 @@
 
         <!-- 3D Models Instances -->
         <a-obj-model
-            src="#tree-obj"
-            mtl="#tree-mtl"
-            animation="property: rotation; easing: linear; to: 360 0 360 ; loop: true; dur: 10000">
+            position="-1 0 0"
+            src="#character-obj"
+            mtl="#character-mtl"
+            animation="property: rotation; easing: linear; to: 0 360 0; loop: true; dur: 10000">
+        </a-obj-model>
+
+        <a-obj-model
+            position="1 0 0"
+            src="#pot-obj"
+            mtl="#pot-mtl"
+            animation="property: rotation; easing: linear; to: 0 360 0; loop: true; dur: 10000">
         </a-obj-model>
 
         <!-- Camera settings -->
