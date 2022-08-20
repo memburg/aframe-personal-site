@@ -5,7 +5,7 @@ const concat = require('gulp-concat');
 const bundleJs = () => {
     return src('./Source/Scripts/**/*.js')
         .pipe(minifyJs())
-        .pipe(concat('bundle.js'))
+        .pipe(concat('Bundle.js'))
         .pipe(dest('./Assets/Scripts/'));
 }
 
