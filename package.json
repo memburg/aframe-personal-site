@@ -1,0 +1,29 @@
+{
+  "name": "aframe-personal-site",
+  "version": "1.0.0",
+  "description": "my personal site in a-frame",
+  "main": "index.js",
+  "scripts": {
+    "compile": "pug ./src/index.pug -P -w -o ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memburg/aframe-personal-site.git"
+  },
+  "keywords": [
+    "a-frame",
+    "pug",
+    "personal-site",
+    "portfolio"
+  ],
+  "author": "Ramb Memburg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/memburg/aframe-personal-site/issues"
+  },
+  "homepage": "https://github.com/memburg/aframe-personal-site#readme",
+  "devDependencies": {
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

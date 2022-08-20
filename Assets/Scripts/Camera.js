@@ -1,3 +1,10 @@
+"use strict";
+
+// Define constant values
+const ZOOM_IN_LIMIT = 3;
+const ZOOM_OUT_LIMIT = 7;
+const ZOOM_MOVEMENT = 0.1;
+
 // This is the default zoom
 let zoom = 5;
 
@@ -12,21 +19,21 @@ document.body.addEventListener('wheel', event => {
     // Zooming will be increasing/decreasing by 0.1
     // in order to have a smooth movement
     if (isZoomingIn) {
-        zoom -= 0.1;
+        zoom -= ZOOM_MOVEMENT;
     } else {
-        zoom += 0.1;
+        zoom += ZOOM_MOVEMENT;
     }
 
     // If the camera position in the Z axis is less than or equal
     // to 3 it won't go further
-    if (zoom <= 3) {    
-        zoom = 3;
+    if (zoom <= ZOOM_IN_LIMIT) {    
+        zoom = ZOOM_IN_LIMIT;
     }
 
     // If the camera position in the Z axis is greater than or equal
     // to 7 it won't go further
-    if (zoom >= 7) {    
-        zoom = 7;
+    if (zoom >= ZOOM_OUT_LIMIT) {    
+        zoom = ZOOM_OUT_LIMIT;
     }
 
     // Set the final calculation to the HTML element

@@ -1,0 +1,63 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Ramb Memburg | Software Engineer
+        script(src="https://aframe.io/releases/1.3.0/aframe.min.js")
+    body
+        a-scene(vr-mode-ui="enabled: false")
+            a-assets
+                //- Character model
+                a-asset-item(
+                    id="character-obj"
+                    src="./Assets/Models/Character.obj"
+                )
+
+                a-asset-item(
+                    id="character-mtl"
+                    src="./Assets/Models/Character.mtl"
+                )
+
+                //- Pot model
+                a-asset-item(
+                    id="pot-obj"
+                    src="./Assets/Models/Pot.obj"
+                )
+
+                a-asset-item(
+                    id="pot-mtl"
+                    src="./Assets/Models/Pot.mtl"
+                )
+
+            //- Background settings
+            a-sky(color="#ede1d8")
+
+            //- Character model instance
+            a-obj-model(
+                position="-1 0 0"
+                src="#character-obj"
+                mtl="#character-mtl"
+                rotation="-16 0 0"
+                animation="property: rotation; easing: linear; to: -16 360 0; loop: true; dur: 5000"
+            )
+
+            //- Pot model instance
+            a-obj-model(
+                position="1 0 0"
+                src="#pot-obj"
+                mtl="#pot-mtl"
+                rotation="-20 0 0"
+                animation="property: rotation; easing: linear; to: -20 360 0; loop: true; dur: 3000"
+            )
+
+            //- Camera settings
+            a-camera(
+                id="camera"
+                position="0 0.5 5"
+                wasd-controls="enabled: false"
+                look-controls="enabled: false"
+            )
+
+            script(src="./Assets/Scripts/Camera.js") 

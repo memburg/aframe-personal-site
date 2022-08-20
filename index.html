@@ -1,69 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramb Memburg | Software Engineer</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-</head>
-
-<body>
+  </head>
+  <body>
     <a-scene vr-mode-ui="enabled: false">
-        <!-- Assets -->
-        <a-assets>
-            <!-- Character model -->
-            <a-asset-item
-                id="character-obj"
-                src="./Assets/Models/Character.obj">
-            </a-asset-item>
-
-            <a-asset-item
-                id="character-mtl"
-                src="./Assets/Models/Character.mtl">
-            </a-asset-item>
-
-            <!-- Pot model -->
-            <a-asset-item
-                id="pot-obj"
-                src="./Assets/Models/Pot.obj">
-            </a-asset-item>
-        
-            <a-asset-item
-                id="pot-mtl"
-                src="./Assets/Models/Pot.mtl">
-            </a-asset-item>
-        </a-assets>
-
-        <!-- Backgroud settings -->
-        <a-sky color="#e3ddcf"></a-sky>
-
-        <!-- 3D Models Instances -->
-        <a-obj-model
-            position="-1 0 0"
-            src="#character-obj"
-            mtl="#character-mtl"
-            animation="property: rotation; easing: linear; to: 0 360 0; loop: true; dur: 10000">
-        </a-obj-model>
-
-        <a-obj-model
-            position="1 0 0"
-            src="#pot-obj"
-            mtl="#pot-mtl"
-            animation="property: rotation; easing: linear; to: 0 360 0; loop: true; dur: 10000">
-        </a-obj-model>
-
-        <!-- Camera settings -->
-        <a-camera
-            id="camera"
-            position="0 0.5 5"
-            wasd-controls="enabled: false"
-            look-controls="enabled: false">
-        </a-camera>
+      <a-assets>
+        <a-asset-item id="character-obj" src="./Assets/Models/Character.obj"></a-asset-item>
+        <a-asset-item id="character-mtl" src="./Assets/Models/Character.mtl"></a-asset-item>
+        <a-asset-item id="pot-obj" src="./Assets/Models/Pot.obj"></a-asset-item>
+        <a-asset-item id="pot-mtl" src="./Assets/Models/Pot.mtl"></a-asset-item>
+      </a-assets>
+      <a-sky color="#ede1d8"></a-sky>
+      <a-obj-model position="-1 0 0" src="#character-obj" mtl="#character-mtl" rotation="-16 0 0" animation="property: rotation; easing: linear; to: -16 360 0; loop: true; dur: 5000"></a-obj-model>
+      <a-obj-model position="1 0 0" src="#pot-obj" mtl="#pot-mtl" rotation="-20 0 0" animation="property: rotation; easing: linear; to: -20 360 0; loop: true; dur: 3000"></a-obj-model>
+      <a-camera id="camera" position="0 0.5 5" wasd-controls="enabled: false" look-controls="enabled: false"></a-camera>
+      <script src="./Assets/Scripts/Camera.js"> </script>
     </a-scene>
-
-    <script src="./Assets/Scripts/Camera.js"></script>
-</body>
-
+  </body>
 </html>
