@@ -1,0 +1,1 @@
+"use strict";const ZOOM_IN_LIMIT=3,ZOOM_OUT_LIMIT=7,ZOOM_MOVEMENT=.1;let zoom=5;document.body.addEventListener("wheel",O=>{const o=document.getElementById("camera");O.deltaY<0?zoom-=ZOOM_MOVEMENT:zoom+=ZOOM_MOVEMENT,(zoom=zoom<=ZOOM_IN_LIMIT?ZOOM_IN_LIMIT:zoom)>=ZOOM_OUT_LIMIT&&(zoom=ZOOM_OUT_LIMIT),o.setAttribute("position","0 0.5 "+zoom)});

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "my personal site in a-frame",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "compile": "pug ./src/index.pug -P -w -o ./"
   },
@@ -23,6 +24,9 @@
   },
   "homepage": "https://github.com/memburg/aframe-personal-site#readme",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2",
     "pug": "^3.0.2",
     "pug-cli": "^1.0.0-alpha6"
   }
