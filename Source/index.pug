@@ -31,25 +31,46 @@ html(lang="en")
                     src="./Assets/Models/Pot.mtl"
                 )
 
+                //- PC model
+                a-asset-item(
+                    id="pc-obj"
+                    src="./Assets/Models/PC.obj"
+                )
+
+                a-asset-item(
+                    id="pc-mtl"
+                    src="./Assets/Models/PC.mtl"
+                )
+
             //- Background settings
             a-sky(color="#ede1d8")
 
             //- Character model instance
             a-obj-model(
-                position="-1 0 0"
+                position="-2 0 0"
                 src="#character-obj"
                 mtl="#character-mtl"
-                rotation="-16 0 0"
-                animation="property: rotation; easing: linear; to: -16 360 0; loop: true; dur: 5000"
+                rotation="0 0 0"
+                animation="property: rotation; easing: linear; to: 0 360 0; loop: true; dur: 5000"
             )
 
             //- Pot model instance
             a-obj-model(
-                position="1 0 0"
+                position="0 0 0"
                 src="#pot-obj"
                 mtl="#pot-mtl"
-                rotation="-20 0 0"
-                animation="property: rotation; easing: linear; to: -20 360 0; loop: true; dur: 3000"
+                rotation="0 0 0"
+                animation="property: rotation; easing: linear; to: 0 360 0; loop: true; dur: 3000"
+            )
+
+            //- PC model instance
+            a-obj-model(
+                position="2 0 0"
+                src="#pc-obj"
+                mtl="#pc-mtl"
+                rotation="0 0 0"
+                animation="property: rotation; easing: linear; to: 0 360 0; loop: true; dur: 3000"
+                crystalize
             )
 
             //- Camera settings
@@ -60,4 +81,4 @@ html(lang="en")
                 look-controls="enabled: false"
             )
 
-            script(src="./Assets/Scripts/Camera.js") 
+            script(src="./Assets/Scripts/Bundle.js")

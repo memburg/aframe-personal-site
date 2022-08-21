@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "compile": "pug ./src/index.pug -P -w -o ./",
+    "compile": "pug ./Source/index.pug -w -o ./",
     "minify": "gulp devWatch"
   },
   "repository": {
