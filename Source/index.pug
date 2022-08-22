@@ -42,6 +42,16 @@ html(lang="en")
                     src="./Assets/Models/PC.mtl"
                 )
 
+                a-asset-item(
+                    id="pc-crystal-obj"
+                    src="./Assets/Models/PC_Crystal.obj"
+                )
+
+                a-asset-item(
+                    id="pc-crystal-mtl"
+                    src="./Assets/Models/PC_Crystal.mtl"
+                )
+
             //- Background settings
             a-sky(color="#ede1d8")
 
@@ -69,7 +79,16 @@ html(lang="en")
                 src="#pc-obj"
                 mtl="#pc-mtl"
                 rotation="0 0 0"
-                animation="property: rotation; easing: linear; to: 0 360 0; loop: true; dur: 3000"
+                animation="property: rotation; easing: linear; to: 0 360 0; loop: true; dur: 30000"
+            )
+
+            //- PC Crystal model instance
+            a-obj-model(
+                position="2 0 0"
+                src="#pc-crystal-obj"
+                mtl="#pc-crystal-mtl"
+                rotation="0 0 0"
+                animation="property: rotation; easing: linear; to: 0 360 0; loop: true; dur: 30000"
                 crystalize
             )
 

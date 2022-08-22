@@ -1,6 +1,6 @@
 AFRAME.registerComponent('crystalize', {
     schema: {
-        opacity: { type: "number", default: 0.50 }
+        opacity: { type: "number", default: 0.25 }
     },
     init: function () {
         this.el.addEventListener("model-loaded", this.update.bind(this));
